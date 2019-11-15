@@ -22,11 +22,23 @@ function getRepo(user) {
 }
 
 function displayResults(responseJson) {
-    
+    console.log(responseJson[0]);
+    $('.results').html('');
+
+    for(let i = 0; i < 10; i ++){
     $('.results').append(
-        `<p>${responseJson.full_name[0]} ${responseJson.html_Url}${responseJson.message}</p>`
+        `<p>${responseJson[i].name}
+        </br> 
+         
+        ${responseJson[i].clone_url}
+        </br>
+        </br>
+        
+        </p>`
+    
     )
     }
+}
 
     function watchForm() {
         $('form').submit(event => {
