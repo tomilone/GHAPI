@@ -16,7 +16,7 @@ function getRepo(user) {
         .then(responseJson =>
             displayResults(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('#js-error-message').text(`Something went wrong: ${err}`);
         });
 
 }
